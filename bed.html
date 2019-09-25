@@ -1,0 +1,16 @@
+<html>
+	<head>
+	<script>
+		function draw(){
+			iu=document.getElementById("pu").value
+			document.getElementById("res").innerHTML='<img src='+iu+'>'
+		}
+	</script>
+	</head>
+	<body>
+		<input id='pu'></input><br />
+		<button OnClick="draw">验证</button><br />
+		<div id="res"></div>
+		<p>如果看到了图片则说明链接有效</p>
+	</body>
+</head>
