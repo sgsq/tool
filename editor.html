@@ -239,7 +239,24 @@ console.log(foo(5));
 
     </div>
 	<div class="tab-pane fade" id="opfl">
-        <p>没来及写代码</p>
+        
+	<div class="form-group">
+		<label for="inputfile">文件输入</label>
+		<input type="file" id="inputfile" accept="text/markdown">
+		<p class="help-block">加载文件会覆盖当前活动内容</p>
+		    <button type="button" class="btn btn-default form-inline" style ="width: 100%;" onclick = 'lff($("#inputfile")[0].files[0])'>打开</button>
+        <script> function lff(mdf){
+		var reader = new FileReader();
+        reader.readAsText(mdf,"UTF-8");
+        reader.onload = function(){
+            //读取完毕后输出结果
+            console.log(this.result);
+			$("#md").val(this.result);
+			
+        }
+		}</script>
+	</div>
+	
     </div>
     <div class="tab-pane fade" id="sett">
         <p>没来及写代码
